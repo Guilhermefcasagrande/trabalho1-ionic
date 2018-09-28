@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Professores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngFor="let professor of data?.professores" (click)="mostraDetalhes(professor)">
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-img [src]="professor.photoUrl"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{professor.sobrenome}}</h2>
+        <h3>{{professor.nome}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
